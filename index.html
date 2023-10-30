@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cir {
+            width: 75px;
+            height: 75px;
+            border: 2px solid black;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        #col1 {
+            background-color: red;
+        }
+
+        #col2 {
+            background-color: rgb(154, 151, 156);
+        }
+
+        #col3 {
+            background-color: green;
+        }
+
+        #col4 {
+            background-color: yellow;
+        }
+
+        #col5 {
+            background-color: rgb(0, 60, 190);
+        }
+
+        .ch {
+            display: none;
+        }
+
+        .p:hover .ch {
+            display: block;
+            margin-left: 30px;
+        }
+        #colorname{
+            border-radius: 15px;
+            height: 30px;
+            margin-left:40px;
+        }
+        .btn{
+            border-radius: 15px;
+            margin-top: 10px;
+            height: 40px;
+            margin-left:40px;
+        }
+        .heading{
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <h1 class="heading">write color name here</h1>
+    <input type="text" id="colorname" onkeyup="unicolor()">,<br>
+    <div class="p">
+        <button class="btn">or choose color from here</button>
+        <div class="ch">
+            <div class="cir" id="col1" onclick="col1()">
+            </div>
+            <div class="cir" id="col2" onclick="col2()"></div>
+            <div class="cir" id="col3" onclick="col3()"></div>
+            <div class="cir" id="col4" onclick="col4()"></div>
+            <div class="cir" id="col5" onclick="col5()"></div>
+        </div>
+    </div>
+    <script>
+        var body = document.getElementById("body")
+        function col1() {
+            body.style.background = "red"
+            body.style.backgroundImage = "url('first picture.avif')";
+            body.style.backgroundRepeat = "no-repeat"
+            body.style.backgroundSize = "cover"
+
+        }
+        function col2() {
+            body.style.background = "blueviolet"
+            body.style.backgroundImage = "url('22.avif')";
+            body.style.width = "500px"
+            body.style.height = "auto"
+            body.style.backgroundRepeat = "no-repeat"
+            body.style.backgroundSize = "cover"
+        }
+        function col3() {
+            body.style.background = "green"
+            body.style.backgroundImage = "url('33.jpg')";
+            body.style.width = "100%";
+            body.style.height = "100%";
+            body.style.backgroundRepeat = "no-repeat"
+            body.style.backgroundSize = "cover"
+            
+
+        }
+        function col4() {
+            
+            body.style.background = "yellowgreen"
+            body.style.backgroundImage = "url('5 picture.jpg')";
+            body.style.backgroundRepeat = "no-repeat"
+            body.style.backgroundSize = "cover"
+        }
+        function col5() {
+            body.style.background = "blue"
+            body.style.backgroundImage = "url('6.jpg')";
+            body.style.backgroundRepeat = "no-repeat"
+            body.style.backgroundSize = "cover"
+
+        }
+        function unicolor() {
+            var colorname = document.getElementById("colorname").value
+            body.style.background = colorname;
+        }
+    </script>
+</body>
+
+</html>
